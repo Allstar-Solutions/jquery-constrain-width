@@ -1,106 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>jQuery Full Screen Overlay</title>
+		<title>jQuery Constrain Width</title>
 		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="../src/jquery.fullScreenOverlay.js"></script>
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="../src/css/jquery.fullScreenOverlay.css">
-		<style type="text/css">
-			/* Fix Chrome adding unneccesary margin */
-			body {
-				margin: 0;
+		<script src="../src/jquery.constrainWidth.js"></script>
+		<style>
+			.container {
+				width: 200px; 
+				border: 1px solid black;
+			}
+			.image-with-caption {
+				display: table;
+				table-layout: fixed;
+				width: auto;
+			}
+			.caption {
+				background-color: #ddeaf5;
+			    padding: 10px;
+			    caption-side: bottom;
+			    display: table-caption;
+			}
+			img {
+				max-width: 100%;
+				display: block;
+			}
+			div {
+				box-sizing: border-box;
 			}
 		</style>
 	</head>
 	<body>
 		<script>
-			$(function() {
-				$("#element").fullScreenOverlay({
-					fixedHeader: true, 
-					headerContent: '#head-content-1',
-					openTrigger: '#open-trigger-1',
-					closeButtonOmit: true,
-					closeTrigger: '.my-custom-close'
-				});
-				$("#element2").fullScreenOverlay({
-					openTrigger: '#open-trigger-2',
-				});
+			$(window).load(function() {
+				$("#element").constrainWidth();
 			});
-		</script>
-		<div id="element">
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 
-			1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			Test 1 Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1Test 1
-
-			
-		</div>
-		<div id="head-content-1">
-			Head content 1
-			<div class="my-custom-close">
-				Close overlay
+		</script>	
+		<h1>View this in FireFox to see image breaking out of container.</h1>
+		<div class="container">
+			<div class="image-with-caption">
+				<div>
+					<img src="http://placehold.it/250x150">
+				</div>
+				<div class="caption">
+					Without constrainWidth().  Image breaks out of container.
+				</div>
 			</div>
 		</div>
-		<div id="open-trigger-1">
-			Open overlay with fixed header
-		</div>
-		<div id="element2">
-			
-			Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2
-					Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2			Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2			Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2			Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2			Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2 Test 2
-		</div>
-		<div id="open-trigger-2">
-			Open overlay with body only
+		<br />
+		<div class="container">
+			<div class="image-with-caption" id="element">
+				<div>
+					<img src="http://placehold.it/250x150">
+				</div>
+				<div class="caption">
+					With constrainWidth().  Image remains in container.
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

@@ -23,14 +23,14 @@ module.exports = function(grunt) {
 				banner: "<%= meta.banner %>"
 			},
 			dist: {
-				src: ["src/jquery.constrainToParentWidth.js"],
-				dest: "dist/jquery.constrainToParentWidth.js"
+				src: ["src/jquery.constrainWidth.js"],
+				dest: "dist/jquery.constrainWidth.js"
 			},
 		},
 
 		// Lint definitions
 		jshint: {
-			files: ["src/jquery.constrainToParentWidth.js", "test/**/*"],
+			files: ["src/jquery.constrainWidth.js", "test/**/*"],
 			options: {
 				jshintrc: ".jshintrc"
 			}
@@ -39,8 +39,8 @@ module.exports = function(grunt) {
 		// Minify definitions
 		uglify: {
 			my_target: {
-				src: ["dist/jquery.constrainToParentWidth.js"],
-				dest: "dist/jquery.constrainToParentWidth.min.js"
+				src: ["dist/jquery.constrainWidth.js"],
+				dest: "dist/jquery.constrainWidth.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 		coffee: {
 			compile: {
 				files: {
-					"dist/jquery.constrainToParentWidth.js": "src/jquery.constrainToParentWidth.coffee"
+					"dist/jquery.constrainWidth.js": "src/jquery.constrainWidth.coffee"
 				}
 			}
 		},
